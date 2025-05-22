@@ -1,18 +1,10 @@
-let nome = 'Clark Kent';
-let email = 'clarkent@fiap.com'
-let idade = 35;
-let logado = true;
+let nome = 'Superman';
+let poder = 'Voar';
+let estaVoando = false;
 
-// exibindo variaveis
 console.log(nome);
-console.log(email);
-console.log(idade);
-console.log(logado);
+console.log(poder);
+console.log(estaVoando);
 
-// exibindo o tipo
-console.log(typeof nome);
-console.log(typeof email);
-console.log(typeof idade);
-console.log(typeof logado);
-
-const DATA_NASCIMENTO = '1988-10-01';
+// template
+console.log(`Nome: ${nome}, o poder dele é: ${poder}. Ele está voando? ${estaVoando}`);
