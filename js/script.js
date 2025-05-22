@@ -8,3 +8,6 @@ console.log(estaVoando);
 
 // template
 console.log(`Nome: ${nome}, o poder dele é: ${poder}. Ele está voando? ${estaVoando}`);
+
+let mensagem = `Nome: ${nome}, o poder dele é: ${poder}. Ele está voando? ${estaVoando}`
+console.log(mensagem);
