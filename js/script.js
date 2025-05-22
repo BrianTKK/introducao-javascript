@@ -1,13 +1,10 @@
-let nome = 'Superman';
-let poder = 'Voar';
-let estaVoando = false;
+// alert
+alert('Olá sou um alerta')
 
-console.log(nome);
-console.log(poder);
-console.log(estaVoando);
+// prompt
+let mensagem = prompt('Digite uma mensagem')
+// exibir prompt
+console.log(`Mensagem digitada: ${mensagem}`);
 
-// template
-console.log(`Nome: ${nome}, o poder dele é: ${poder}. Ele está voando? ${estaVoando}`);
-
-let mensagem = `Nome: ${nome}, o poder dele é: ${poder}. Ele está voando? ${estaVoando}`
-console.log(mensagem);
+let reposta = confirm('Deseja finalizar o app?')
+console.log(`Resposta: ${reposta}`);
