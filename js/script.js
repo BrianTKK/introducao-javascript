@@ -1,10 +1,23 @@
-// alert
-alert('Olá sou um alerta')
+let primeiroNumero = 50;
+let segundoNumero = 10;
+let resultado;
 
-// prompt
-let mensagem = prompt('Digite uma mensagem')
-// exibir prompt
-console.log(`Mensagem digitada: ${mensagem}`);
+console.log(`Primeiro número = ${primeiroNumero}
+Segundo número = ${segundoNumero}`);
 
-let reposta = confirm('Deseja finalizar o app?')
-console.log(`Resposta: ${reposta}`);
+// adicao
+resultado = primeiroNumero + segundoNumero;
+console.log(`Soma = ${resultado}`);
+// subtração
+resultado = primeiroNumero - segundoNumero;
+console.log(`Subtração = ${resultado}`);
+// divisão
+resultado = primeiroNumero / segundoNumero;
+console.log(`Divisão = ${resultado}`);
+// multiplicação
+resultado = primeiroNumero * segundoNumero;
+console.log(`Multiplicação = ${resultado}`);
+// módulo
+
+resultado = primeiroNumero % segundoNumero;
+console.log(`Resto da divisão = ${resultado}`);
