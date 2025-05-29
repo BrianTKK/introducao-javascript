@@ -1,23 +1,33 @@
-let primeiroNumero = 50;
-let segundoNumero = 10;
-let resultado;
+let numero = 23.53;
+console.log(numero);
 
-console.log(`Primeiro número = ${primeiroNumero}
-Segundo número = ${segundoNumero}`);
+// Math ceil - Arredonda o numero para cima
+console.log(`Math.ceil(${numero}) = ${Math.ceil(numero)}`);
 
-// adicao
-resultado = primeiroNumero + segundoNumero;
-console.log(`Soma = ${resultado}`);
-// subtração
-resultado = primeiroNumero - segundoNumero;
-console.log(`Subtração = ${resultado}`);
-// divisão
-resultado = primeiroNumero / segundoNumero;
-console.log(`Divisão = ${resultado}`);
-// multiplicação
-resultado = primeiroNumero * segundoNumero;
-console.log(`Multiplicação = ${resultado}`);
-// módulo
+// Math floor - Arredonda o numero para baixo
+console.log(`Math.floor(${numero}) = ${Math.floor(numero)}`);
 
-resultado = primeiroNumero % segundoNumero;
-console.log(`Resto da divisão = ${resultado}`);
+// Math round - Arredonda o numero de acordo com a casa decimal
+console.log(`Math.round(${numero}) = ${Math.round(numero)}`);
+
+// Math max - Retorna o maior valor entre os argumentos
+console.log(`Math.max(${numero}) = ${Math.max(34, 84, 10, 25, 99, 74, 86)}`);
+
+// Math min - Retorna o menor valor entre os argumentos
+console.log(`Math.min(${numero}) = ${Math.min(34, 84, 10, 25, 99, 74, 86)}`);
+
+// parseInt - Retorna apenas o número inteiro
+console.log(`parseInt(${numero}) = ${parseInt(numero)}`);
+
+// Math pow - Retorna o valor de um número elevado a uma potência
+console.log(`Math.pow(${numero} a segunda potencia) = ${Math.pow(numero, 2)}`);
+console.log(numero ** 2); // Outra forma de fazer a potenciação
+
+// Math random - Retorna um número aleatório entre 0 e 1
+console.log(Math.random());
+
+// Math sqrt - Retorna a raiz quadrada de um número
+console.log(Math.sqrt(16));
+
+// Math cbrt - Retorna a raiz cúbica de um número
+console.log(Math.cbrt(27));
