@@ -1,53 +1,74 @@
-let frase = 'Javascript é uma linguagem de programação incrível!';
-console.log(frase);
+let dataAtual = new Date();
+console.log(dataAtual);
 
-// retorna o tamanho da sting
-console.log(frase.length);
+// data do mes
+let dataMes = dataAtual.getDate();
+if (dataMes < 10) {
+	dataMes = '0' + dataMes;
+}
+console.log(dataMes);
 
-// precorrendo a string
-console.log(frase[0]);
-console.log(frase[11]);
+// dia da semana
+let dataDia = dataAtual.getDay();
+console.log(dataDia);
 
-// letras maiusculas
-console.log(frase.toUpperCase());
+// colocando o dia da semana por extenso
+switch (dataDia) {
+	case 0:
+		console.log('Domingo');
+		break;
 
-// letras minusculas
-console.log(frase.toLowerCase());
+	case 1:
+		console.log('Segunda-feira');
+		break;
 
-// percorrengo com método
-console.log(frase.charAt(40));
+	case 2:
+		console.log('Terça-feira');
+		break;
 
-// buscar algo a string - inicio 
-console.log(frase.indexOf('u'));
+	case 3:
+		console.log('Quarta-feira');
+		break;
 
-// buscar algo a string - pelo fim
-console.log(frase.lastIndexOf('u'));
+	case 4:
+		console.log('Quinta-feira');
+		break;
 
-// Verificar se existe
-console.log(frase.includes('ling'));
+	case 5:
+		console.log('Sexta-feira');
+		break;
 
-// Juntando strings
-console.log(frase.concat(' E é muito usada no front-end!'));
+	default:
+		console.log('Sábado');
+}
 
-// Substituindo caracteres
-console.log(frase.replace('a', '@'));
-// Substituindo caracteres
-console.log(frase.replaceAll('a', '@'));
+// mes
+let mesAtual = dataAtual.getMonth() + 1; // Janeiro é 0
+if (mesAtual < 10) {
+	mesAtual = '0' + mesAtual;
+}
+console.log(mesAtual);
 
-// parte do string
-console.log(frase.substring(4, 40));
-console.log(frase.slice(4, 40));
+// pegando o ano
+anoAtual = dataAtual.getFullYear();
+console.log(anoAtual);
 
-// separando a String 
-console.log(frase.split('a'));
-console.log(frase.split(''));
-console.log(frase.split(' '));
+// pegando a hora
+let horaAtual = dataAtual.getHours();
+horaAtual = horaAtual < 10 ? '0' + horaAtual : horaAtual;
+console.log(horaAtual);
 
-// retirando espaços do inicio ou final da string
-console.log(frase.trim());
+// pegando minutos
+let minutoAtual = dataAtual.getMinutes();
+minutoAtual = minutoAtual < 10 ? '0' + minutoAtual : minutoAtual;
+console.log(minutoAtual);
 
-// verificando se a string começa com uma cadeia de caracteres
-console.log(frase.startsWith('Javascript'));
+// pegando segundos
+let segundoAtual = dataAtual.getSeconds();
+segundoAtual = segundoAtual < 10 ? '0' + segundoAtual : segundoAtual;
+console.log(segundoAtual);
 
-// verificando se a string termina com uma cadeia de caracteres
-console.log(frase.endsWith('incrível!'));
+// montando a data
+console.log(
+	`Data atual: ${dataMes}/${mesAtual}/${anoAtual} ${horaAtual}:${minutoAtual}:${segundoAtual}`
+);
