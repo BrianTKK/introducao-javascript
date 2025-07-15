@@ -1,18 +1,51 @@
-let senha = '';
-do {
-	senha = prompt('Digite a senha:');
-} while (senha !== 'senha123');
+const usuario = prompt('Digite seu nome: ');
+const senha = prompt('Digite sua senha: ');
 
-alert('Acesso permitido!');
+if (usuario === 'admin' && senha === '1234') {
+	console.log('Login efetuado com sucesso');
 
-let produtoEmEstoque = 10;
-do {
-	console.log('Ainda temos esse produto em estoque');
-	console.log(`Quantidade em estoque: ${produtoEmEstoque}`);
+	const numeroProduto = Math.floor(Math.random() * 4) + 1;
+	let nomeProduto;
 
-	produtoEmEstoque--;
-	if (produtoEmEstoque == 4) {
-		alert('Apenas 4 produtos restantes!');
+	switch (numeroProduto) {
+		case 1:
+			nomeProduto = 'Notebook';
+			break;
+		case 2:
+			nomeProduto = 'Tablet';
+			break;
+		case 3:
+			nomeProduto = 'Celular';
+			break;
+		case 4:
+			nomeProduto = 'Videogame';
+			break;
+		default:
+			console.log('Produto não encontrado');
 	}
-} while (produtoEmEstoque > 0);
-console.log('Produto esgotado!');
+	console.log(`Produto selecionado: ${nomeProduto}`);
+
+	let precoProduto = Math.ceil(Math.random() * 5000);
+	while (precoProduto < 1000) {
+		precoProduto = Math.ceil(Math.random() * 5000);
+	}
+	console.log(`Preço do produto: R$ ${precoProduto}`);
+
+	let precoFrete = 0;
+	if (precoProduto < 1100) {
+		precoFrete = 35;
+	}
+
+	const percentualDesconto = Math.floor(Math.random() * 10) + 1;
+
+	const desconto = (precoProduto * percentualDesconto) / 100;
+
+	let precoFinal = precoProduto - desconto + precoFrete;
+
+	console.log(`Desconto: R$ ${desconto.toFixed(2)} (${percentualDesconto}%)`);
+	console.log(`Frete: R$ ${precoFrete}`);
+	console.log(`Preço final: R$ ${precoFinal.toFixed(2)}`);
+	console.log('Obrigado por comprar conosco!');
+} else {
+	console.log('Usuário ou senha inválidos');
+}
