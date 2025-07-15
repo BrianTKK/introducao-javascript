@@ -1,20 +1,9 @@
-const regiao = 'sul';
-let valorFrete = 0;
-
-switch (regiao) {
-    case 'sudeste':
-        valorFrete = 35.00;
-        break;
-    case 'nordeste':
-        valorFrete = 45.00;
-        break;
-    case 'sul':
-        valorFrete = 30.00;
-        break;
-    default:
-        valorFrete = 50.00;
+// criando uma contagem com for
+for (let i = 0; i <= 9; i += 2) {
+	console.log(i);
 }
 
-console.log(`Região: ${regiao}`);
-console.log(`Valor do frete: R$ ${valorFrete.toFixed(2)}`);
-
+// Sorteando com For
+for (let i = 0; i <= 19; i++) {
+	console.log(`Número Sorteado: ${Math.floor(Math.random() * 20)}`);
+}
