@@ -1,10 +1,18 @@
-// pedir ao usuario a digitação do numero 7
-let numero = Number(prompt('Digite o numero 7'));
+let senha = '';
+do {
+	senha = prompt('Digite a senha:');
+} while (senha !== 'senha123');
 
-while (numero !== 7) {
-	numero = Number(
-		prompt('Número inválido. Por favor, digite o número 7 novamente:')
-	);
-}
+alert('Acesso permitido!');
 
-console.log(`O número digitado foi: ${numero}`);
+let produtoEmEstoque = 10;
+do {
+	console.log('Ainda temos esse produto em estoque');
+	console.log(`Quantidade em estoque: ${produtoEmEstoque}`);
+
+	produtoEmEstoque--;
+	if (produtoEmEstoque == 4) {
+		alert('Apenas 4 produtos restantes!');
+	}
+} while (produtoEmEstoque > 0);
+console.log('Produto esgotado!');
