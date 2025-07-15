@@ -1,9 +1,10 @@
-// criando uma contagem com for
-for (let i = 0; i <= 9; i += 2) {
-	console.log(i);
+// pedir ao usuario a digitação do numero 7
+let numero = Number(prompt('Digite o numero 7'));
+
+while (numero !== 7) {
+	numero = Number(
+		prompt('Número inválido. Por favor, digite o número 7 novamente:')
+	);
 }
 
-// Sorteando com For
-for (let i = 0; i <= 19; i++) {
-	console.log(`Número Sorteado: ${Math.floor(Math.random() * 20)}`);
-}
+console.log(`O número digitado foi: ${numero}`);
