@@ -1,26 +1,20 @@
-const precoProduto = 150;
-const frete = 30;
-let valorFinal = 0;
+const regiao = 'sul';
+let valorFrete = 0;
 
-if (precoProduto < 150) {
-	valorFinal = precoProduto + frete;
-} else {
-	valorFinal = precoProduto;
+switch (regiao) {
+    case 'sudeste':
+        valorFrete = 35.00;
+        break;
+    case 'nordeste':
+        valorFrete = 45.00;
+        break;
+    case 'sul':
+        valorFrete = 30.00;
+        break;
+    default:
+        valorFrete = 50.00;
 }
 
-console.log(`O valor total do produto é R$ ${valorFinal.toFixed(2)}`);
+console.log(`Região: ${regiao}`);
+console.log(`Valor do frete: R$ ${valorFrete.toFixed(2)}`);
 
-let metodoPagamento = 'Pix';
-if (metodoPagamento === 'Cartão de Crédito') {
-    console.log('Você pode parcelar em até 12x');
-}else if (metodoPagamento === 'Boleto') {
-    console.log('Você terá 5% de desconto no boleto');
-}else if (metodoPagamento === 'Pix') {
-    console.log('Você terá 10% de desconto no Pix');
-}else {
-    console.log('Outro meio de pagamento');
-}
-
-let estoque = 5;
-let statusEstoque = estoque > 0 ? 'Produto disponível' : 'Produto esgotado';
-console.log(statusEstoque);
